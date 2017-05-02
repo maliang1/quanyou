@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<UIMeta flowmode="true" id="listwin_um" preferredHeight="0" preferredWidth="0">
+    
+     <FlowhLayout autoFill="true" id="g_p_1">
+        <FlowhPanel id="flowhp1" width="200"  className="left_side_style">
+	        <Widget id="simplequery">
+	        </Widget>
+        </FlowhPanel>
+        <FlowhPanel id="g_p_2">
+            <Widget id="main">
+            </Widget>
+        </FlowhPanel>
+    </FlowhLayout>
+</UIMeta>
