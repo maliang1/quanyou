@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd 
+      http://code.alibabatech.com/schema/dubbo
+      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- dubbo 配置 -->
+    <dubbo:application name="${dubbo.application.name}"/>
+    <dubbo:registry address="${dubbo.registry.address}" timeout="15000"/>
+    <dubbo:consumer check="false"/>
+
+    <!-- 消费者声明 -->
+    <dubbo:reference id="goodsService" interface="com.newteam.demo.api.service.purchase.GoodsServiceApi" version="0.1" filter="logcontext"/>
+    <dubbo:reference id="organizationService" interface="com.newteam.demo.api.service.system.OrganizationServiceApi" version="0.1" filter="logcontext"/>
+    <dubbo:reference id="userService" interface="com.newteam.demo.api.service.user.UserServiceApi" version="0.1" filter="logcontext"/>
+    <dubbo:reference id="customerRecordService" interface="com.newteam.demo.api.service.customer.CustomerRecordServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="goodsPriceService" interface="com.newteam.demo.api.service.purchase.GoodsPriceServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="saleTargetService" interface="com.newteam.demo.api.service.sale.SaleTargetServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="customerService" interface="com.newteam.demo.api.service.customer.CustomerServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="supplierService" interface="com.newteam.demo.api.service.suppliers.SupplierServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="companyNewsService" interface="com.newteam.demo.api.service.companyNews.CompanyNewsServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="scheduleService" interface="com.newteam.demo.api.service.schedule.ScheduleServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="stockService" interface="com.newteam.demo.api.service.stock.StockServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="stockDaybookService" interface="com.newteam.demo.api.service.stock.StockDaybookServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="storageService" interface="com.newteam.demo.api.service.stock.StorageServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="provinceService" interface="com.newteam.demo.api.service.province.ProvinceServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="purchaseOrderService" interface="com.newteam.demo.api.service.purchase.PurchaseOrderServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="saleOrderService" interface="com.newteam.demo.api.service.sale.SaleOrderServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="versionManagerService" interface="com.newteam.demo.api.service.system.VersionManagerServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="operationLogService" interface="com.newteam.demo.api.service.operationlog.OperationLogServiceApi" version="0.1" filter="logcontext"/>
+	<dubbo:reference id="reportService" interface="com.newteam.demo.api.service.report.ReportServiceApi" version="0.1" filter="logcontext"/>
+</beans>
