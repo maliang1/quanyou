@@ -1,7 +1,0 @@
-#
-#Mon Jul 25 15:33:23 GMT+08:00 2016
-module.name=test
-module.editorVersion=NEW_VERSION
-module.webContext=portal
-module.defConfig=module.xml
-pack.prefix=com.test
